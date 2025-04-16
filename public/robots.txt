@@ -1,0 +1,17 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /checkout/
+Disallow: /search
+
+# Permitir el acceso completo a las páginas útiles
+Allow: /
+
+# Evita el bloqueo de recursos necesarios
+Allow: *.js
+Allow: *.css
+
+# Sitemap para facilitar el rastreo
+Sitemap: https://nixramosdev.com/sitemap.xml
