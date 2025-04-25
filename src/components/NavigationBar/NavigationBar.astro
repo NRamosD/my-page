@@ -1,0 +1,26 @@
+---
+import ItemNavigation from "./ItemNavigation.astro"
+
+const MENU_OPTIONS = [
+    { name: 'Home', path: '/' },
+    { name: 'About', path: '/about' },
+    { name: 'Contact', path: '/contact' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'Projects', path: '/projects' },
+    { name: 'Resume', path: '/resume' },
+]
+
+---
+
+<div class=` w-full md:w-[700px] h-16 md:h-20
+    fixed bottom-5 left-1/2 -translate-x-1/2 grid grid-cols-6 rounded-3xl
+    bg-gray-800 
+    hover:cursor-pointer gap-2 justify-center align-middle`>
+    {
+        MENU_OPTIONS.map((item)=>
+            <ItemNavigation name={item.name} path={item.path}/>
+        )
+    }
+</div>
+
+
