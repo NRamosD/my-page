@@ -2,12 +2,23 @@
 const { name, path } = Astro.props;
 ---
 
-<div class="p-2 h-full text-center content-center hover:cursor-pointer">
-    <a href={path} class="h-full w-full">
-        <div class="h-auto w-auto bg-amber-200">
+<a href={path} class="item-navigation h-full w-full">
+    <div class="p-2 h-full text-center content-center hover:cursor-pointer">
+        <div class="span-name h-auto w-auto">
             <h2>
-                <span>{name}</span>
+                <span class="span-name text-[#1a1a2e] font-extrabold uppercase">{name}</span>
             </h2>
         </div>
-    </a>
-</div>
+    </div>
+</a>
+
+<style>
+    .item-navigation:hover .span-name {
+        transition: transform 0.2s ease-out;
+        transform: translateY(-5px);
+    }
+    .span-name {
+        transition: transform 0.5s ease-out;
+        transform: translateY(0);
+    }
+</style>

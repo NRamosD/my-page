@@ -2,6 +2,7 @@
 import NavigationBar from "../components/NavigationBar/NavigationBar.astro";
 import global from "../styles/global.css"
 
+import { ClientRouter } from 'astro:transitions';
 
 const { pageTitle  } = Astro.props;
 
@@ -16,12 +17,15 @@ const { pageTitle  } = Astro.props;
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="stylesheet" href={global}/>
-
+		<meta name="generator" content={Astro.generator} />
+		<ClientRouter />
 		<title>{pageTitle}</title>
 	</head>
 	<body>
 		<NavigationBar/>
-		<slot />
+		<div class="flex justify-center">
+			<slot/>
+		</div>
 	</body>
 </html>
 

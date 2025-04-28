@@ -1,10 +1,17 @@
 ---
 import Welcome from '../components/Welcome.astro';
+import GeneralContainerLayout from '../layouts/GeneralContainerLayout.astro';
 import Layout from '../layouts/Layout.astro';
 
 pageTitle: "Hola futuro cliente"
 
 ---
 
-<Layout>
+<Layout pageTitle="I'm NixR">
+    <GeneralContainerLayout>
+        <a href="/about" class=" fixed bottom-40">
+            <h3 class=" col-span-4" transition:name="elabout" transition:animate="fade">vamonos al about</h3>
+        </a>
+        
+    </GeneralContainerLayout>
 </Layout>
