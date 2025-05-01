@@ -1,4 +1,5 @@
 ---
+import NavigationBar from '../components/NavigationBar/NavigationBar.astro';
 import Welcome from '../components/Welcome.astro';
 import GeneralContainerLayout from '../layouts/GeneralContainerLayout.astro';
 import Layout from '../layouts/Layout.astro';
@@ -7,11 +8,25 @@ pageTitle: "Hola futuro cliente"
 
 ---
 
-<Layout pageTitle="I'm NixR">
+<Layout pageTitle=`Nix Ramos Dev`>
+    <!-- <NavigationBar/> -->
     <GeneralContainerLayout>
-        <a href="/about" class=" fixed bottom-40">
-            <h3 class="rowdies-bold col-span-4 text-4xl text-white uppercase" transition:name="elabout" transition:animate="fade">vamonos al about</h3>
-        </a>
+        <div class="col-span-12 h-80 content-end">
+            <span class="text-bold text-5xl text-white">
+                Hi
+            </span>
+            <h1 class="text-bold col-span-4 text-7xl text-white">
+                I&#39;m Nixon Ramos
+            </h1>
+        </div>
+        <div class=" grid col-span-6">
+            <h6 class="text-bold col-span-4 text-4xl text-white ">
+                Let me help you build with code!
+            </h6>
+        </div>
+        <!-- <a href="/about" class=" fixed bottom-40">
+            <h3 class="text-bold col-span-4 text-4xl text-white uppercase" transition:name="elabout" transition:animate="fade" >vamonos al about</h3>
+        </a> -->
         
     </GeneralContainerLayout>
 </Layout>

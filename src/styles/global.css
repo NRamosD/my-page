@@ -7,19 +7,37 @@ body{
     /*#1a1a2e   #16213e #0f3460 #e94560*/
 }
 
-.rowdies-light {
+h1, h2, h3 {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+h4, h5, h6 {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p {
+    font-family: "Rowdies", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.text-light {
     font-family: "Rowdies", sans-serif;
     font-weight: 300;
     font-style: normal;
 }
   
-.rowdies-regular {
+.text-regular {
     font-family: "Rowdies", sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
   
-.rowdies-bold {
+.text-bold {
     font-family: "Rowdies", sans-serif;
     font-weight: 700;
     font-style: normal;

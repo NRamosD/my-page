@@ -5,7 +5,7 @@ const MENU_OPTIONS = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     { name: 'Contact', path: '/contact' },
-    { name: 'Blog', path: '/blog' },
+    { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
     { name: 'Resume', path: '/resume' },
 ]
@@ -18,7 +18,7 @@ const MENU_OPTIONS = [
     hover:cursor-pointer gap-2 justify-center align-middle`>
     {
         MENU_OPTIONS.map((item)=>
-            <ItemNavigation name={item.name} path={item.path}/>
+            <ItemNavigation name={item.name} path={item.path} transition:animate="fade"/>
         )
     }
 </div>
