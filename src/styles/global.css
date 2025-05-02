@@ -43,3 +43,13 @@ p {
     font-style: normal;
 }
   
+.arcoiris {
+    font-size: 60px;
+    font-weight: bold;
+    background: linear-gradient(to right, red, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.arcoiris-bg {
+    background: linear-gradient(to top, red, orange);
+}

@@ -1,5 +1,6 @@
 ---
 import Welcome from '../components/Welcome.astro';
+import GeneralContainerLayout from '../layouts/GeneralContainerLayout.astro';
 import Layout from '../layouts/Layout.astro';
 
 const pageTitle = "About Me";
@@ -10,13 +11,28 @@ const pageTitle = "About Me";
 
 <Layout pageTitle={pageTitle}>
     <!-- transition:name="slide" transition:animate="slide" -->
-    <div class=" fixed top-10 right-40 w-40" >
-        <h1 transition:name="elabout" class="rowdies-light text-white">{pageTitle}</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, labore pariatur! Impedit minus aspernatur in magnam eaque. Natus, obcaecati, suscipit assumenda id, eaque laboriosam repudiandae rem ipsa itaque provident delectus.</p>
-    </div>
-    <div>
-        <p class=" text-white">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, dicta molestiae perspiciatis ipsum vero sint vel reiciendis deserunt reprehenderit, provident facere recusandae! Voluptatibus sed voluptatem vero suscipit sit fugit neque.
-        </p>
-    </div>
+     <GeneralContainerLayout>
+        <div class="h-[90vh] col-span-12 flex">
+            <div class="m-auto grid grid-cols-12">
+                <div class="p-4 col-span-6" >
+                    <div class="p-4 arcoiris-bg rounded-2xl h-full">
+                        <h1 transition:name="elabout" class="text-bold text-4xl md:text-6xl text-white">{pageTitle}</h1>
+                        <p class="text-base md:text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, labore pariatur! Impedit minus aspernatur in magnam eaque. Natus, obcaecati, suscipit assumenda id, eaque laboriosam repudiandae rem ipsa itaque provident delectus.</p>
+                    </div>
+                </div>
+                <div class="p-4 col-span-6 grid gap-4" >
+                    <div>
+                        <img
+                        class="rounded-2xl" 
+                        src="https://media.licdn.com/dms/image/v2/D4E03AQFOg4Gdk7dTug/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719160925706?e=1751500800&v=beta&t=vDNvVTwj_CRO_y5bin01L_iuX5h_XDRP3NsYZLKwQGY"/>
+                    </div>
+                    <div class="arcoiris-bg rounded-2xl h-[150px]">
+                        <p class="text-white p-2">
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quas ipsa, facere vel eveniet autem numquam alias molestias ducimus laborum facilis voluptate quos officia, omnis iste quae qui voluptatem mollitia possimus?
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+     </GeneralContainerLayout>
 </Layout>

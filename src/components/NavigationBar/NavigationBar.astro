@@ -4,17 +4,17 @@ import ItemNavigation from "./ItemNavigation.astro"
 const MENU_OPTIONS = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Contact', path: '/contact' },
     { name: 'Services', path: '/services' },
     { name: 'Projects', path: '/projects' },
     { name: 'Resume', path: '/resume' },
+    { name: 'Contact', path: '/contact' },
 ]
 
 ---
 
 <div class=`w-11/12 md:w-[700px] md:h-12
     fixed bottom-5 left-1/2 -translate-x-1/2 grid grid-cols-3 md:grid-cols-6 rounded-3xl
-    bg-[#e94560] border-2 border-[#fff]
+    arcoiris-bg border-2 border-[#fff]
     hover:cursor-pointer gap-2 justify-center align-middle`>
     {
         MENU_OPTIONS.map((item)=>
