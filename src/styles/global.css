@@ -47,6 +47,7 @@ p {
     font-size: 60px;
     font-weight: bold;
     background: linear-gradient(to right, red, orange);
+    background-clip: inherit;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
