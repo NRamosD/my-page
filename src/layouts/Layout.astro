@@ -25,10 +25,10 @@ const { pageTitle  } = Astro.props;
 
 
 		<ClientRouter />
-		<title>{pageTitle}</title>
+		<title>{pageTitle?`${pageTitle} - Nix Ramos Dev`:"Nix Ramos Dev"}</title>
 	</head>
 	<body>
-		<NavigationBar/>
+		<!-- <NavigationBar/> -->
 		<div class="flex justify-center">
 			<slot/>
 		</div>

@@ -3,7 +3,9 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: #1a1a2e;
+    /* background-color: #1a1a2e; */
+    background: #020024;
+    background: linear-gradient(90deg,#050414 0%, #292929 100%); 
     /*#1a1a2e   #16213e #0f3460 #e94560*/
 }
 

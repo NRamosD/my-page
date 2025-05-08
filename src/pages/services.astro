@@ -1,12 +1,19 @@
 ---
+import ReturnHome from "../components/NavigationBar/ReturnHome.astro";
 import GeneralContainerLayout from "../layouts/GeneralContainerLayout.astro";
 import Layout from "../layouts/Layout.astro";
 
-
+const pageTitle = "Services";
 ---
 
-<Layout pageTitle=`Services - Nix Ramos Dev`>
+<Layout pageTitle={pageTitle}>
     <GeneralContainerLayout>
-        <p>services</p>
+        <div class="col-span-3 hidden md:block"></div>
+        <div class="col-span-12 md:col-span-6 text-center">
+            <h1 transition:name={pageTitle} 
+            class="text-bold text-4xl md:text-6xl text-white">{pageTitle}</h1>
+        </div>
+        <div class="col-span-3 hidden md:block"></div>
+        <ReturnHome/>
     </GeneralContainerLayou>
 </Layou>

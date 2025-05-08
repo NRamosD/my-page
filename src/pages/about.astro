@@ -1,4 +1,5 @@
 ---
+import ReturnHome from '../components/NavigationBar/ReturnHome.astro';
 import Welcome from '../components/Welcome.astro';
 import GeneralContainerLayout from '../layouts/GeneralContainerLayout.astro';
 import Layout from '../layouts/Layout.astro';
@@ -16,7 +17,8 @@ const pageTitle = "About Me";
             <div class="m-auto grid grid-cols-12">
                 <div class="p-4 col-span-6" >
                     <div class="p-4 arcoiris-bg rounded-2xl h-full">
-                        <h1 transition:name="elabout" class="text-bold text-4xl md:text-6xl text-white">{pageTitle}</h1>
+                        <h1 transition:name="About" 
+                        class="text-bold text-4xl md:text-6xl text-white">{pageTitle}</h1>
                         <p class="text-base md:text-xl">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Earum, labore pariatur! Impedit minus aspernatur in magnam eaque. Natus, obcaecati, suscipit assumenda id, eaque laboriosam repudiandae rem ipsa itaque provident delectus.</p>
                     </div>
                 </div>
@@ -34,5 +36,6 @@ const pageTitle = "About Me";
                 </div>
             </div>
         </div>
+        <ReturnHome/>
      </GeneralContainerLayout>
 </Layout>
