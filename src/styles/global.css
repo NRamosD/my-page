@@ -56,3 +56,13 @@ p {
 .arcoiris-bg {
     background: linear-gradient(to top, red, orange);
 }
+
+@layer utilities {
+    .scrollbar-hidden {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE and Edge */
+    }
+    .scrollbar-hidden::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
+    }
+}
