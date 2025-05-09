@@ -46,7 +46,6 @@ p {
 }
   
 .arcoiris {
-    font-size: 60px;
     font-weight: bold;
     background: linear-gradient(to right, red, orange);
     background-clip: inherit;
@@ -64,5 +63,57 @@ p {
     }
     .scrollbar-hidden::-webkit-scrollbar {
       display: none; /* Chrome, Safari */
+    }
+}
+
+.gradient-image-left{
+    mask-image: linear-gradient(
+        to left,
+        black 5%,
+        transparent 
+    );
+}
+
+
+
+
+
+
+.carousel-infinite {
+    overflow: hidden;
+    display: flex;
+    > * {
+        flex: 0 0 100%;
+    }
+    &:hover .group-carousel-infinite {
+        animation-play-state: paused;
+    }
+}
+
+.card-ci {
+    width: 100%;
+    color: white;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 10%) 5px 5px 20px 0;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.group-carousel-infinite {
+    display: flex;
+    gap: 20px;
+    /* Add padding to the right to create a gap between the last and first card. */
+    padding-right: 20px;
+    will-change: transform; /* We should be nice to the browser - let it know what we're going to animate. */
+    animation: scrolling 10s linear infinite;
+}
+
+@keyframes scrolling {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
     }
 }

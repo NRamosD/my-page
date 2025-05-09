@@ -4,6 +4,8 @@ import GeneralContainerLayout from "../layouts/GeneralContainerLayout.astro";
 import Layout from "../layouts/Layout.astro";
 
 const pageTitle = "Resume"
+
+const HABILITIES = ["Typescript", "React", "Material Design", "Figma", "Logic"]
 ---
 
 <Layout pageTitle={pageTitle}>
@@ -12,6 +14,55 @@ const pageTitle = "Resume"
         <div class="col-span-12 md:col-span-6">
             <h1 transition:name={pageTitle} 
             class="text-bold text-4xl md:text-6xl text-white text-right">{pageTitle}</h1>
+        </div>
+        <div class="col-span-12 relative h-auto w-full">
+            <div class="grid grid-cols-12 h-[75vh] p-2 overflow-auto scrollbar-hidden pb-20">
+                <h2 class="col-span-12 text-regular text-[40px] arcoiris w-fit">Work Experience</h2>
+                {
+                    [0,1,2,3,4].map(item=>
+                    <div class="col-span-12 relative grid grid-cols-12 my-2 text-white border-b-2 rounded-br-2xl">
+                        <div class="col-span-9 py-5 pl-5">
+                            <h3 class="text-regular text-3xl ">Name of work</h3>
+                            <p class="w-fit text-base text-[#b3b3b3]">From 02/2024 to 06/2024</p>
+                            <p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum quod fuga, cumque minus et recusandae aliquam, atque enim facere delectus aliquid, alias pariatur harum ipsa quae in veritatis? Neque!</p>
+                            <div class="grid grid-cols-12 pt-5">
+                                <div class="col-span-4"><p>Habilities Applied:</p></div>
+                                <div class="col-span-8 overflow-x-hidden carousel-infinite">
+                                    <div class="group-carousel-infinite">
+                                        {
+                                            HABILITIES.map((item)=>
+                                            <div class="card-ci"><p>{item}</p></div>
+                                            )
+                                        }
+                                    </div>
+                                    <div aria-hidden class="group-carousel-infinite">
+                                        {
+                                            HABILITIES.map((item)=>
+                                            <div class="card-ci"><p>{item}</p></div>
+                                            )
+                                        }
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-span-3  overflow-hidden">
+                            <img class="gradient-image-left h-full w-2/5 object-cover absolute right-0 -z-10 rounded-br-2xl rounded-tr-2xl" 
+                                src="https://i.ytimg.com/vi/PN-y2dQOhOc/maxresdefault.jpg"/>
+                        </div>
+                    </div>
+                    )
+                }
+                <h2 class="col-span-12 text-regular text-xl arcoiris w-fit">Other Projects</h2>
+                {
+                    [0,1,2,3,4].map(item=>
+                    <div class="col-span-12 grid gap-5">
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum quod fuga, cumque minus et recusandae aliquam, atque enim facere delectus aliquid, alias pariatur harum ipsa quae in veritatis? Neque!</p>
+                        <p class="text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nostrum quod fuga, cumque minus et recusandae aliquam, atque enim facere delectus aliquid, alias pariatur harum ipsa quae in veritatis? Neque!</p>
+                    </div>
+                    )
+                }
+            </div>
+            <div class="absolute bottom-0 w-full h-20 bg-gradient-to-bl from-transparent from-50% to-[#000000]"/>
         </div>
 
 
